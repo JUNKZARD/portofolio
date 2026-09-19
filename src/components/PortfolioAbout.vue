@@ -3,7 +3,7 @@
     <div class="container about-inner">
       <div class="about-image" data-reveal="left">
         <img
-          src="/public/profil.webp"
+          src="/public/tentang_saya.webp"
           alt="Bekerja di depan laptop"
           loading="lazy"
         />
@@ -16,9 +16,7 @@
         <span class="section-tag">Tentang Saya</span>
         <h2 class="section-title">Membangun Web yang Bernilai</h2>
         <p class="section-desc">
-          Saya adalah pengembang frontend berpengalaman yang menyukai antarmuka
-          yang indah dan berfungsi dengan baik. Setiap proyek saya bangun dengan
-          fokus pada performa, aksesibilitas, dan pengalaman pengguna.
+          Saya adalah mahasiswa Informatika yang memiliki ketertarikan pada web development, data, dan teknologi. Saya senang mengeksplorasi teknologi baru dan membangun project sebagai cara untuk mengasah kemampuan.
         </p>
         <ul class="about-highlights">
           <li data-reveal="up" data-delay="100">React, Vue, TypeScript, Tailwind CSS</li>
