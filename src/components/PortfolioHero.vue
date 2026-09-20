@@ -47,37 +47,37 @@ onUnmounted(() => {
     <div class="container hero-inner">
       <div class="hero-text">
         <p class="hero-greeting" data-reveal="up">
-          <span class="wave">👋</span> Halo, saya
+          <span class="wave">👋</span> Hello, I'm
         </p>
         <h1 class="hero-name" data-reveal="up" data-delay="100">Gungde Pandu</h1>
         <h2 class="hero-role">
           <span class="blink-caret"></span>{{ roleChars }}<span class="caret">|</span>
         </h2>
         <p class="hero-desc" data-reveal="up" data-delay="200">
-          Saya membantu bisnis membangun pengalaman digital yang indah,
-          responsif, dan mudah digunakan. 🚀
+          I help businesses build beautiful, responsive, and easy-to-use
+          digital experiences. 🚀
         </p>
         <div class="hero-cta" data-reveal="up" data-delay="300">
-          <a href="#projects" class="btn btn-primary">Lihat Proyek <span class="cta-arrow">→</span></a>
-          <a href="#contact" class="btn btn-ghost">Hubungi Saya</a>
+          <a href="#projects" class="btn btn-primary">View Projects <span class="cta-arrow">→</span></a>
+          <a href="#contact" class="btn btn-ghost">Contact Me</a>
         </div>
         <div class="hero-stats" data-reveal="up" data-delay="400">
           <div class="stat">
             <span class="stat-num">3+</span>
-            <span class="stat-label">Tahun Pengalaman</span>
+            <span class="stat-label">Years of Experience</span>
           </div>
           <div class="stat-divider" />
           <div class="stat">
             <span class="stat-num">10+</span>
-            <span class="stat-label">Proyek Selesai</span>
+            <span class="stat-label">Projects Completed</span>
           </div>
         </div>
       </div>
       <div class="hero-image" data-reveal="scale" data-delay="200">
         <div class="hero-img-wrap">
           <img
-            src="/public/profil.webp"
-            alt="Foto profil"
+            src="/public/profil_new.webp"
+            alt="Profile photo"
             loading="eager"
           />
           <div class="hero-img-ring" />
@@ -93,12 +93,12 @@ onUnmounted(() => {
           /></div>
         <div class="float-tag float-tag-2"> <img
             src="https://cdn.simpleicons.org/vuedotjs/42b883"
-            alt="Foto profil"
+            alt="logo"
             loading="eager"
           /></div>
         <div class="float-tag float-tag-3"> <img
             src="https://cdn.simpleicons.org/mysql/4479A1"
-            alt="Foto profil"
+            alt="logo"
             loading="eager"
           /></div>
       </div>

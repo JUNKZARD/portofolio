@@ -22,11 +22,11 @@ function handleSubmit() {
   <section id="contact">
     <div class="container contact-inner">
       <div data-reveal="left">
-        <span class="section-tag">Kontak</span>
-        <h2 class="section-title">Mari Bekerja Sama</h2>
+        <span class="section-tag">Contact</span>
+        <h2 class="section-title">Let's Work Together</h2>
         <p class="section-desc">
-          Punya proyek atau ide menarik? Silakan hubungi saya melalui form
-          ini atau langsung lewat media sosial.
+          Do you have a project or an interesting idea? Feel free to reach
+          out through this form or directly via social media.
         </p>
 
         <div class="contact-methods">
@@ -40,7 +40,7 @@ function handleSubmit() {
           <div class="contact-method">
             <div class="method-icon">📍</div>
             <div>
-              <p class="method-label">Lokasi</p>
+              <p class="method-label">Location</p>
               <p class="method-value">Indonesia, Bali</p>
             </div>
           </div>
@@ -49,20 +49,20 @@ function handleSubmit() {
 
       <form class="contact-form" @submit.prevent="handleSubmit" data-reveal="right">
         <div class="form-field">
-          <label for="cf-name">Nama</label>
-          <input v-model="form.name" id="cf-name" type="text" placeholder="Nama Anda" required />
+          <label for="cf-name">Name</label>
+          <input v-model="form.name" id="cf-name" type="text" placeholder="Your Name" required />
         </div>
         <div class="form-field">
           <label for="cf-email">Email</label>
-          <input v-model="form.email" id="cf-email" type="email" placeholder="Email Anda" required />
+          <input v-model="form.email" id="cf-email" type="email" placeholder="Your Email" required />
         </div>
         <div class="form-field">
-          <label for="cf-message">Pesan</label>
-          <textarea v-model="form.message" id="cf-message" placeholder="Pesan Anda..." rows="5" required />
+          <label for="cf-message">Message</label>
+          <textarea v-model="form.message" id="cf-message" placeholder="Your message..." rows="5" required />
         </div>
         <button class="btn btn-primary" type="submit">
-          <span v-if="!submitted">Kirim Pesan 🚀</span>
-          <span v-else class="sent-msg">Terkirim! ✓</span>
+          <span v-if="!submitted">Send Message 🚀</span>
+          <span v-else class="sent-msg">Sent! ✓</span>
         </button>
       </form>
     </div>

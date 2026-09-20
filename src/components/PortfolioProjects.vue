@@ -2,7 +2,7 @@
 const projects = [
   {
     title: 'todolist',
-    desc: 'Aplikasi daftar tugas sederhana yang dibangun dengan Next.js dan TypeScript untuk mengelola aktivitas harian.',
+    desc: 'A simple to-do list app built with Next.js and TypeScript to manage daily activities.',
     tags: ['Next.js', 'TypeScript'],
     image: 'https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?w=600&h=400&fit=crop',
     github: 'https://github.com/JUNKZARD/todolist',
@@ -10,7 +10,7 @@ const projects = [
   },
   {
     title: 'Project_BTR',
-    desc: 'Proyek web berbasis Next.js dan TypeScript dengan tampilan modern dan performa yang dioptimalkan.',
+    desc: 'A Next.js and TypeScript based web project with a modern look and optimized performance.',
     tags: ['Next.js', 'TypeScript'],
     image: 'https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=600&h=400&fit=crop',
     github: 'https://github.com/JUNKZARD/Project_BTR',
@@ -18,34 +18,19 @@ const projects = [
   },
   {
     title: 'ThePuriPradaBali',
-    desc: 'Website untuk Puri Prada Bali — menyajikan promosi akomodasi dan wisata khas Bali dengan desain elegant.',
+    desc: 'A website for Puri Prada Bali — showcasing accommodation and Balinese tourism with an elegant design.',
     tags: ['Next.js', 'TypeScript', 'Bali'],
     image: 'https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=600&h=400&fit=crop',
     github: 'https://github.com/JUNKZARD/ThePuriPradaBali',
     demo: 'https://the-puri-prada-bali.vercel.app',
   },
   {
-    title: 'ndu',
-    desc: 'Website minimalis hasil eksperimen pertama dengan Next.js dan TypeScript, terdeploy di Vercel.',
-    tags: ['Next.js', 'TypeScript'],
-    image: 'https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=600&h=400&fit=crop',
-    github: 'https://github.com/JUNKZARD/ndu',
-    demo: 'https://ndu-tau.vercel.app',
-  },
-  {
     title: 'Trash-Detection',
-    desc: 'AI pendeteksi sampah sederhana yang membedakan sampah plastik dan organik secara otomatis.',
+    desc: 'A simple trash detection AI that automatically distinguishes between plastic and organic waste.',
     tags: ['JavaScript', 'AI', 'Machine Learning'],
     image: 'https://images.unsplash.com/photo-1532996122724-e3c354a0b15b?w=600&h=400&fit=crop',
     github: 'https://github.com/JUNKZARD/Trash-Detection',
     demo: 'https://trash-detection-eight.vercel.app',
-  },
-  {
-    title: 'memories-fozone',
-    desc: 'Website untuk mengenang dan menyimpan momen-momen bersama dengan galeri dan cerita sederhana.',
-    tags: ['HTML', 'CSS', 'JavaScript'],
-    image: 'https://images.unsplash.com/photo-1495745966610-4967a22b1f79?w=600&h=400&fit=crop',
-    github: 'https://github.com/JUNKZARD/memories-fozone',
   },
 ]
 </script>
@@ -53,11 +38,11 @@ const projects = [
 <template>
   <section id="projects">
     <div class="container">
-      <span class="section-tag" data-reveal="up">Proyek</span>
-      <h2 class="section-title" data-reveal="up" data-delay="100">Proyek Unggulan</h2>
+      <span class="section-tag" data-reveal="up">Projects</span>
+      <h2 class="section-title" data-reveal="up" data-delay="100">Featured Projects</h2>
       <p class="section-desc" data-reveal="up" data-delay="200">
-        Berikut proyek-proyek yang pernah saya buat dan publikasikan di GitHub,
-        lengkap dengan tautan repositori dan demo langsung.
+        Here are the projects I have built and published on GitHub,
+        complete with repository links and live demos.
       </p>
 
       <div class="projects-grid">
@@ -133,7 +118,7 @@ const projects = [
 }
 
 .project-thumb::after {
-  content: 'Buka Github ↗';
+  content: 'Open GitHub ↗';
   position: absolute;
   inset: 0;
   display: flex;

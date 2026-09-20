@@ -20,28 +20,55 @@ const skills = [
 
 const groups = ['Frontend', 'Backend', 'Database', 'Tools']
 
-const groupEmoji: Record<string, string> = {
-  Frontend: '🎨',
-  Backend: '⚙️',
-  Database: '🗄️',
-  Tools: '🛠️',
+const groupIcon: Record<string, string> = {
+  Frontend: `
+    <path d="M8 9l-3 3 3 3M16 9l3 3-3 3"/>
+    <line x1="13" y1="5" x2="11" y2="19"/>
+  `,
+  Backend: `
+    <rect x="2" y="3" width="20" height="8" rx="2"/>
+    <rect x="2" y="13" width="20" height="8" rx="2"/>
+    <line x1="6" y1="7" x2="6" y2="7.01"/>
+    <line x1="6" y1="17" x2="6" y2="17.01"/>
+  `,
+  Database: `
+    <ellipse cx="12" cy="5" rx="9" ry="3"/>
+    <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/>
+    <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/>
+  `,
+  Tools: `
+    <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>
+  `,
 }
 </script>
 
 <template>
   <section id="skills">
     <div class="container">
-      <span class="section-tag" data-reveal="up">Keahlian</span>
-      <h2 class="section-title" data-reveal="up" data-delay="100">Teknologi yang Saya Kuasai</h2>
+      <span class="section-tag" data-reveal="up">Skills</span>
+      <h2 class="section-title" data-reveal="up" data-delay="100">Technologies I Use</h2>
       <p class="section-desc" data-reveal="up" data-delay="200">
-        Berikut adalah teknologi dan bahasa pemrograman yang saya gunakan
-        untuk membangun berbagai proyek di GitHub.
+        These are the technologies and programming languages I use
+        to build various projects on GitHub.
       </p>
 
       <div class="skills-groups">
         <div v-for="group in groups" :key="group" class="skills-group" data-reveal="up">
           <h3 class="skills-group-title">
-            <span class="group-emoji" :data-group="group">{{ groupEmoji[group] }}</span>
+            <span class="group-emoji" :data-group="group">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="18"
+                height="18"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                v-html="groupIcon[group]"
+              />
+            </span>
             {{ group }}
           </h3>
           <div class="skills-grid">
@@ -90,8 +117,8 @@ const groupEmoji: Record<string, string> = {
   border-radius: 10px;
   background: var(--card);
   border: 1px solid var(--border);
-  font-size: 1.05rem;
-  transition: transform 0.3s ease;
+  color: var(--accent);
+  transition: transform 0.3s ease, color 0.3s ease;
 }
 
 .skills-group:hover .group-emoji {

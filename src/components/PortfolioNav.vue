@@ -30,10 +30,10 @@ onUnmounted(() => window.removeEventListener('scroll', handleScroll))
         <span /><span /><span />
       </button>
       <ul class="nav-links" :class="{ open: menuOpen }">
-        <li><a href="#about" @click="closeMenu"><span class="link-text">Tentang</span></a></li>
-        <li><a href="#skills" @click="closeMenu"><span class="link-text">Keahlian</span></a></li>
-        <li><a href="#projects" @click="closeMenu"><span class="link-text">Proyek</span></a></li>
-        <li><a href="#contact" @click="closeMenu"><span class="link-text">Kontak</span></a></li>
+        <li><a href="#about" @click="closeMenu"><span class="link-text">About</span></a></li>
+        <li><a href="#skills" @click="closeMenu"><span class="link-text">Skills</span></a></li>
+        <li><a href="#projects" @click="closeMenu"><span class="link-text">Projects</span></a></li>
+        <li><a href="#contact" @click="closeMenu"><span class="link-text">Contact</span></a></li>
       </ul>
     </div>
   </nav>

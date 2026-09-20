@@ -4,27 +4,27 @@
       <div class="about-image" data-reveal="left">
         <img
           src="/public/tentang_saya.webp"
-          alt="Bekerja di depan laptop"
+          alt="Working at a laptop"
           loading="lazy"
         />
         <div class="about-exp-badge">
           <span class="exp-num">3+</span>
-          <span class="exp-label">Tahun<br>Pengalaman</span>
+          <span class="exp-label">Years<br>Experience</span>
         </div>
       </div>
       <div data-reveal="right">
-        <span class="section-tag">Tentang Saya</span>
-        <h2 class="section-title">Membangun Web yang Bernilai</h2>
+        <span class="section-tag">About Me</span>
+        <h2 class="section-title">Building Web That Delivers Value</h2>
         <p class="section-desc">
-          Saya adalah mahasiswa Informatika yang memiliki ketertarikan pada web development, data, dan teknologi. Saya senang mengeksplorasi teknologi baru dan membangun project sebagai cara untuk mengasah kemampuan.
+          I am an Informatics student with a passion for web development, data, and technology. I enjoy exploring new technologies and building projects as a way to sharpen my skills.
         </p>
         <ul class="about-highlights">
           <li data-reveal="up" data-delay="100">React, Vue, TypeScript, Tailwind CSS</li>
-          <li data-reveal="up" data-delay="200">Desain responsif mobile-first</li>
-          <li data-reveal="up" data-delay="300">Optimasi performa & SEO</li>
-          <li data-reveal="up" data-delay="400">3+ tahun pengalaman di industri</li>
+          <li data-reveal="up" data-delay="200">Mobile-first responsive design</li>
+          <li data-reveal="up" data-delay="300">Performance & SEO optimization</li>
+          <li data-reveal="up" data-delay="400">3+ years of industry experience</li>
         </ul>
-        <a href="#contact" class="btn btn-primary" style="margin-top:1.5rem" data-reveal="up" data-delay="500">Hubungi Saya</a>
+        <a href="#contact" class="btn btn-primary" style="margin-top:1.5rem" data-reveal="up" data-delay="500">Contact Me</a>
       </div>
     </div>
   </section>

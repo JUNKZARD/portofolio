@@ -49,7 +49,7 @@ onUnmounted(() => window.removeEventListener('scroll', handleScroll))
     class="to-top"
     :class="{ show: showTopBtn }"
     @click="scrollTop"
-    aria-label="Kembali ke atas"
+    aria-label="Back to top"
   >
     ↑
   </button>
