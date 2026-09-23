@@ -183,7 +183,7 @@ const projects = [
     title: 'todolist',                                    // judul
     desc: 'Aplikasi daftar tugas...',                     // deskripsi
     tags: ['Next.js', 'TypeScript'],                      // tag/pill
-    image: 'https://.../foto.jpg',                        // URL gambar
+    image: '/todolist.webp',                              // path gambar di folder public/
     github: 'https://github.com/JUNKZARD/todolist',       // link repo
     demo: 'https://todolist-liard-tau.vercel.app',        // link demo (boleh dihapus jika tidak ada)
   },
@@ -330,4 +330,4 @@ atau buat keyframes baru di `main.css` dan panggil dengan `animation:`.
 - **Hormati `prefers-reduced-motion`**: sistem animasi sudah otomatis dinonaktifkan untuk
   pengguna yang memilih "kurangi gerakan" di sistem operasi.
 - **Gambar eksternal**: icons skill memakai `cdn.simpleicons.org` (slug data yang harus
-  valid — nama icon Simple Icons), gambar proyek memakai Unsplash. Ganti bebas.
+  valid — nama icon Simple Icons), gambar proyek memakai file lokal di `public/` (misal `/todolist.webp`). Ganti bebas.
