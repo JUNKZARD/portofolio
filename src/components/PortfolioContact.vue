@@ -10,6 +10,10 @@ const form = ref({
 const submitted = ref(false)
 
 function handleSubmit() {
+  const { name, email, message } = form.value
+  const subject = encodeURIComponent(`Portfolio Contact dari ${name}`)
+  const body = encodeURIComponent(`Nama: ${name}\nEmail: ${email}\n\nPesan:\n${message}`)
+  window.location.href = `mailto:gungpandu2006@gmail.com?subject=${subject}&body=${body}`
   submitted.value = true
   setTimeout(() => {
     submitted.value = false
@@ -30,20 +34,30 @@ function handleSubmit() {
         </p>
 
         <div class="contact-methods">
-          <div class="contact-method">
-            <div class="method-icon">📧</div>
+          <a class="contact-method" href="mailto:gungpandu2006@gmail.com">
+            <div class="method-icon">
+              <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <rect x="2" y="4" width="20" height="16" rx="2" />
+                <path d="m22 7-10 6L2 7" />
+              </svg>
+            </div>
             <div>
               <p class="method-label">Email</p>
               <p class="method-value">gungpandu2006@gmail.com</p>
             </div>
-          </div>
-          <div class="contact-method">
-            <div class="method-icon">📍</div>
+          </a>
+          <a class="contact-method" href="https://www.google.com/maps/search/?api=1&query=Bali+Indonesia" target="_blank" rel="noopener">
+            <div class="method-icon">
+              <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 0 1 16 0Z" />
+                <circle cx="12" cy="10" r="3" />
+              </svg>
+            </div>
             <div>
               <p class="method-label">Location</p>
               <p class="method-value">Indonesia, Bali</p>
             </div>
-          </div>
+          </a>
         </div>
       </div>
 
@@ -88,6 +102,18 @@ function handleSubmit() {
   display: flex;
   align-items: center;
   gap: 1rem;
+  text-decoration: none;
+  color: inherit;
+  border-radius: 12px;
+  padding: 0.35rem;
+  margin: -0.35rem;
+  transition: opacity 0.25s ease;
+}
+
+.contact-method:hover .method-value {
+  color: var(--accent);
+  text-decoration: underline;
+  text-underline-offset: 4px;
 }
 
 .method-icon {
