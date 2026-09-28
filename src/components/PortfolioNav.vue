@@ -42,7 +42,7 @@ onUnmounted(() => window.removeEventListener('scroll', handleScroll))
             type="application/pdf"
             @click="closeMenu"
           >
-            <span class="link-text">Download CV</span>
+            <!-- <span class="link-text">Download CV</span> -->
           </a>
         </li>
       </ul>
