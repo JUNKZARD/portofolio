@@ -59,6 +59,30 @@ onUnmounted(() => {
         </p>
         <div class="hero-cta" data-reveal="up" data-delay="300">
           <a href="#projects" class="btn btn-primary">View Projects <span class="cta-arrow">→</span></a>
+          <a
+            href="/CV_GungDePandu_ATS.pdf"
+            class="btn btn-ghost btn-download"
+            download="CV_GungDePandu_ATS.pdf"
+            type="application/pdf"
+          >
+            <svg
+              class="download-icon"
+              viewBox="0 0 24 24"
+              width="16"
+              height="16"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+            >
+              <path d="M12 3v12" />
+              <path d="M7 11l5 5 5-5" />
+              <path d="M5 21h14" />
+            </svg>
+            Download CV
+          </a>
           <a href="#contact" class="btn btn-ghost">Contact Me</a>
         </div>
         <div class="hero-stats" data-reveal="up" data-delay="400">
@@ -193,6 +217,19 @@ onUnmounted(() => {
   display: flex;
   flex-wrap: wrap;
   gap: 1rem;
+}
+
+.btn-download {
+  text-decoration: none;
+}
+
+.download-icon {
+  flex-shrink: 0;
+  transition: transform 0.25s ease;
+}
+
+.btn-download:hover .download-icon {
+  transform: translateY(2px);
 }
 
 .hero-image {

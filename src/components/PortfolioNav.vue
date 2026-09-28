@@ -34,6 +34,17 @@ onUnmounted(() => window.removeEventListener('scroll', handleScroll))
         <li><a href="#skills" @click="closeMenu"><span class="link-text">Skills</span></a></li>
         <li><a href="#projects" @click="closeMenu"><span class="link-text">Projects</span></a></li>
         <li><a href="#contact" @click="closeMenu"><span class="link-text">Contact</span></a></li>
+        <li>
+          <a
+            href="/CV_GungDePandu_ATS.pdf"
+            class="nav-download"
+            download="CV_GungDePandu_ATS.pdf"
+            type="application/pdf"
+            @click="closeMenu"
+          >
+            <span class="link-text">Download CV</span>
+          </a>
+        </li>
       </ul>
     </div>
   </nav>
@@ -123,6 +134,11 @@ onUnmounted(() => window.removeEventListener('scroll', handleScroll))
   z-index: 1;
 }
 
+.nav-links a.nav-download {
+  color: var(--accent);
+  font-weight: 600;
+}
+
 /* burger */
 .burger {
   display: none;
@@ -201,6 +217,7 @@ onUnmounted(() => window.removeEventListener('scroll', handleScroll))
   .nav-links.open li:nth-child(2) { animation-delay: 0.1s; }
   .nav-links.open li:nth-child(3) { animation-delay: 0.15s; }
   .nav-links.open li:nth-child(4) { animation-delay: 0.2s; }
+  .nav-links.open li:nth-child(5) { animation-delay: 0.25s; }
 
   .nav-links a {
     display: block;

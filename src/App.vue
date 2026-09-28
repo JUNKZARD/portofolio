@@ -41,6 +41,7 @@ onUnmounted(() => window.removeEventListener('scroll', handleScroll))
         <a href="https://github.com/JUNKZARD" target="_blank" rel="noopener">GitHub</a>
         <a href="https://www.linkedin.com/in/gung-pandu-2869a936a/" target="_blank" rel="noopener">LinkedIn</a>
         <a href="mailto:gungpandu2006@gmail.com">Email</a>
+        <a href="/CV_GungDePandu_ATS.pdf" download="CV_GungDePandu_ATS.pdf" type="application/pdf">Download CV</a>
       </div>
     </div>
   </footer>
