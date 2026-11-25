@@ -1,25 +1,46 @@
 <script setup lang="ts">
+import html5 from '@/assets/skills/html5.svg'
+import css from '@/assets/skills/css.svg'
+import javascript from '@/assets/skills/javascript.svg'
+import typescript from '@/assets/skills/typescript.svg'
+import vue from '@/assets/skills/vuedotjs.svg'
+import react from '@/assets/skills/react.svg'
+import nextjs from '@/assets/skills/nextdotjs.svg'
+import tailwind from '@/assets/skills/tailwindcss.svg'
+import nodejs from '@/assets/skills/nodedotjs.svg'
+import python from '@/assets/skills/python.svg'
+import git from '@/assets/skills/git.svg'
+import github from '@/assets/skills/github.svg'
+import linux from '@/assets/skills/linux.svg'
+import mysql from '@/assets/skills/mysql.svg'
+import postgresql from '@/assets/skills/postgresql.svg'
+import mongodb from '@/assets/skills/mongodb.svg'
+import wireshark from '@/assets/skills/wireshark.svg'
+import cisco from '@/assets/skills/cisco.svg'
+import bash from '@/assets/skills/gnubash.svg'
+import virtualbox from '@/assets/skills/virtualbox.svg'
+
 const skills = [
-  { name: 'HTML5', icon: 'https://cdn.simpleicons.org/html5/E34F26', group: 'Frontend' },
-  { name: 'CSS3', icon: 'https://cdn.simpleicons.org/css/38bdf8', group: 'Frontend' },
-  { name: 'JavaScript', icon: 'https://cdn.simpleicons.org/javascript/F7DF1E', group: 'Frontend' },
-  { name: 'TypeScript', icon: 'https://cdn.simpleicons.org/typescript/3178C6', group: 'Frontend' },
-  { name: 'Vue 3', icon: 'https://cdn.simpleicons.org/vuedotjs/42b883', group: 'Frontend' },
-  { name: 'React', icon: 'https://cdn.simpleicons.org/react/61dafb', group: 'Frontend' },
-  { name: 'Next.js', icon: 'https://cdn.simpleicons.org/nextdotjs/ffffff', group: 'Frontend' },
-  { name: 'Tailwind CSS', icon: 'https://cdn.simpleicons.org/tailwindcss/38bdf8', group: 'Frontend' },
-  { name: 'Node.js', icon: 'https://cdn.simpleicons.org/nodedotjs/5fa04e', group: 'Backend' },
-  { name: 'Python', icon: 'https://cdn.simpleicons.org/python/3776ab', group: 'Backend' },
-  { name: 'Git', icon: 'https://cdn.simpleicons.org/git/F05032', group: 'Tools' },
-  { name: 'GitHub', icon: 'https://cdn.simpleicons.org/github/ffffff', group: 'Tools' },
-  { name: 'Linux', icon: 'https://cdn.simpleicons.org/linux/FCC624', group: 'Tools' },
-  { name: 'MySQL', icon: 'https://cdn.simpleicons.org/mysql/4479A1', group: 'Database' },
-  { name: 'PostgreSQL', icon: 'https://cdn.simpleicons.org/postgresql/4169E1', group: 'Database' },
-  { name: 'MongoDB', icon: 'https://cdn.simpleicons.org/mongodb/47A248', group: 'Database' },
-  { name: 'Wireshark', icon: 'https://cdn.simpleicons.org/wireshark/7dd3fc', group: 'NetSec Lab' },
-  { name: 'Cisco Packet Tracer', icon: 'https://cdn.simpleicons.org/cisco/1BA0D7', group: 'NetSec Lab' },
-  { name: 'Bash', icon: 'https://cdn.simpleicons.org/gnubash/4EAA25', group: 'NetSec Lab' },
-  { name: 'VirtualBox', icon: 'https://cdn.simpleicons.org/virtualbox/ffffff', group: 'NetSec Lab' },
+  { name: 'HTML5', icon: html5, group: 'Frontend' },
+  { name: 'CSS3', icon: css, group: 'Frontend' },
+  { name: 'JavaScript', icon: javascript, group: 'Frontend' },
+  { name: 'TypeScript', icon: typescript, group: 'Frontend' },
+  { name: 'Vue 3', icon: vue, group: 'Frontend' },
+  { name: 'React', icon: react, group: 'Frontend' },
+  { name: 'Next.js', icon: nextjs, group: 'Frontend' },
+  { name: 'Tailwind CSS', icon: tailwind, group: 'Frontend' },
+  { name: 'Node.js', icon: nodejs, group: 'Backend' },
+  { name: 'Python', icon: python, group: 'Backend' },
+  { name: 'Git', icon: git, group: 'Tools' },
+  { name: 'GitHub', icon: github, group: 'Tools' },
+  { name: 'Linux', icon: linux, group: 'Tools' },
+  { name: 'MySQL', icon: mysql, group: 'Database' },
+  { name: 'PostgreSQL', icon: postgresql, group: 'Database' },
+  { name: 'MongoDB', icon: mongodb, group: 'Database' },
+  { name: 'Wireshark', icon: wireshark, group: 'NetSec Lab' },
+  { name: 'Cisco Packet Tracer', icon: cisco, group: 'NetSec Lab' },
+  { name: 'Bash', icon: bash, group: 'NetSec Lab' },
+  { name: 'VirtualBox', icon: virtualbox, group: 'NetSec Lab' },
 ]
 
 const groups = ['NetSec Lab', 'Frontend', 'Backend', 'Database', 'Tools']

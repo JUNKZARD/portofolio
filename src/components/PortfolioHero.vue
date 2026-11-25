@@ -1,5 +1,8 @@
 <script setup lang="ts">
 import { ref, onMounted, onUnmounted } from 'vue'
+import reactIcon from '@/assets/skills/react.svg'
+import ciscoIcon from '@/assets/skills/cisco.svg'
+import pythonIcon from '@/assets/skills/python.svg'
 
 const roles: string[] = ['NetSec Enthusiast', 'Junior Developer', 'Full Stack Developer', 'Data Enthusiast']
 const roleIndex = ref(0)
@@ -100,9 +103,15 @@ onUnmounted(() => {
       <div class="hero-image" data-reveal="scale" data-delay="200">
         <div class="hero-img-wrap">
           <img
-            src="/public/profil_new.webp"
+            src="/profil_new-640.webp"
+            srcset="/profil_new-320.webp 320w, /profil_new-640.webp 640w"
+            sizes="(max-width: 768px) 220px, 320px"
+            width="320"
+            height="320"
             alt="Profile photo"
             loading="eager"
+            fetchpriority="high"
+            decoding="async"
           />
           <div class="hero-img-ring" />
         </div>
@@ -110,17 +119,17 @@ onUnmounted(() => {
           <span class="badge-dot" />
         </div>
         <div class="float-tag float-tag-1"> <img
-            src="https://cdn.simpleicons.org/react/61dafb"
+            :src="reactIcon"
             alt="React"
             loading="eager"
           /></div>
         <div class="float-tag float-tag-2"> <img
-            src="https://cdn.simpleicons.org/cisco/1BA0D7"
+            :src="ciscoIcon"
             alt="Cisco Packet Tracer"
             loading="eager"
           /></div>
         <div class="float-tag float-tag-3"> <img
-            src="https://cdn.simpleicons.org/python/3776ab"
+            :src="pythonIcon"
             alt="Python"
             loading="eager"
           /></div>

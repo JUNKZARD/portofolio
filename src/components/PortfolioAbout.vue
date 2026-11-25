@@ -3,7 +3,7 @@
     <div class="container about-inner">
       <div class="about-image" data-reveal="left">
         <img
-          src="/public/tentang_saya.webp"
+          src="/tentang_saya.webp"
           alt="Working at a laptop"
           loading="lazy"
         />
