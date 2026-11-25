@@ -31,6 +31,7 @@ onUnmounted(() => window.removeEventListener('scroll', handleScroll))
       </button>
       <ul class="nav-links" :class="{ open: menuOpen }">
         <li><a href="#about" @click="closeMenu"><span class="link-text">About</span></a></li>
+        <li><a href="#netsec" @click="closeMenu"><span class="link-text">NetSec</span></a></li>
         <li><a href="#skills" @click="closeMenu"><span class="link-text">Skills</span></a></li>
         <li><a href="#projects" @click="closeMenu"><span class="link-text">Projects</span></a></li>
         <li><a href="#contact" @click="closeMenu"><span class="link-text">Contact</span></a></li>
@@ -42,7 +43,7 @@ onUnmounted(() => window.removeEventListener('scroll', handleScroll))
             type="application/pdf"
             @click="closeMenu"
           >
-            <!-- <span class="link-text">Download CV</span> -->
+            <span class="link-text">Download CV</span>
           </a>
         </li>
       </ul>
@@ -197,7 +198,7 @@ onUnmounted(() => window.removeEventListener('scroll', handleScroll))
   }
 
   .nav-links.open {
-    max-height: 300px;
+    max-height: 360px;
     padding: 1.5rem 0;
     visibility: visible;
     transition: max-height 0.4s ease, padding 0.3s ease, visibility 0s;
@@ -218,6 +219,7 @@ onUnmounted(() => window.removeEventListener('scroll', handleScroll))
   .nav-links.open li:nth-child(3) { animation-delay: 0.15s; }
   .nav-links.open li:nth-child(4) { animation-delay: 0.2s; }
   .nav-links.open li:nth-child(5) { animation-delay: 0.25s; }
+  .nav-links.open li:nth-child(6) { animation-delay: 0.3s; }
 
   .nav-links a {
     display: block;

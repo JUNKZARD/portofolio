@@ -16,9 +16,28 @@ const skills = [
   { name: 'MySQL', icon: 'https://cdn.simpleicons.org/mysql/4479A1', group: 'Database' },
   { name: 'PostgreSQL', icon: 'https://cdn.simpleicons.org/postgresql/4169E1', group: 'Database' },
   { name: 'MongoDB', icon: 'https://cdn.simpleicons.org/mongodb/47A248', group: 'Database' },
+  { name: 'Wireshark', icon: 'https://cdn.simpleicons.org/wireshark/7dd3fc', group: 'NetSec Lab' },
+  { name: 'Cisco Packet Tracer', icon: 'https://cdn.simpleicons.org/cisco/1BA0D7', group: 'NetSec Lab' },
+  { name: 'Bash', icon: 'https://cdn.simpleicons.org/gnubash/4EAA25', group: 'NetSec Lab' },
+  { name: 'VirtualBox', icon: 'https://cdn.simpleicons.org/virtualbox/ffffff', group: 'NetSec Lab' },
 ]
 
-const groups = ['Frontend', 'Backend', 'Database', 'Tools']
+const groups = ['NetSec Lab', 'Frontend', 'Backend', 'Database', 'Tools']
+
+const groupNotes: Record<string, string> = {
+  'NetSec Lab': 'Beginner level, practiced in a local virtual lab.',
+}
+
+const groupTopics: Record<string, string[]> = {
+  'NetSec Lab': [
+    'OSI & TCP/IP',
+    'Subnetting',
+    'Packet capture',
+    'Network simulation',
+    'Linux CLI',
+    'Virtual machines',
+  ],
+}
 
 const groupIcon: Record<string, string> = {
   Frontend: `
@@ -39,6 +58,13 @@ const groupIcon: Record<string, string> = {
   Tools: `
     <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>
   `,
+  'NetSec Lab': `
+    <circle cx="5" cy="12" r="2"/>
+    <circle cx="19" cy="5" r="2"/>
+    <circle cx="19" cy="19" r="2"/>
+    <circle cx="12" cy="12" r="2"/>
+    <path d="M7 12h3M14 11l3-4M14 13l3 4"/>
+  `,
 }
 </script>
 
@@ -46,14 +72,14 @@ const groupIcon: Record<string, string> = {
   <section id="skills">
     <div class="container">
       <span class="section-tag" data-reveal="up">Skills</span>
-      <h2 class="section-title" data-reveal="up" data-delay="100">Technologies I Use</h2>
+      <h2 class="section-title" data-reveal="up" data-delay="100">Tech Stack and Lab Tools</h2>
       <p class="section-desc" data-reveal="up" data-delay="200">
-        These are the technologies and programming languages I use
-        to build various projects on GitHub.
+        I am learning networking and security basics in a local lab, and
+        I build web projects with the stack below.
       </p>
 
       <div class="skills-groups">
-        <div v-for="group in groups" :key="group" class="skills-group" data-reveal="up">
+        <div v-for="group in groups" :key="group" class="skills-group" :data-group="group" data-reveal="up">
           <h3 class="skills-group-title">
             <span class="group-emoji" :data-group="group">
               <svg
@@ -71,6 +97,10 @@ const groupIcon: Record<string, string> = {
             </span>
             {{ group }}
           </h3>
+          <p v-if="groupNotes[group]" class="skills-group-note">{{ groupNotes[group] }}</p>
+          <div v-if="groupTopics[group]" class="skills-topics">
+            <span v-for="topic in groupTopics[group] ?? []" :key="topic" class="skill-topic">{{ topic }}</span>
+          </div>
           <div class="skills-grid">
             <div
               v-for="(skill, i) in skills.filter((s) => s.group === group)"
@@ -108,6 +138,29 @@ const groupIcon: Record<string, string> = {
   letter-spacing: 0.05em;
 }
 
+.skills-group-note {
+  color: var(--text-muted);
+  font-size: 0.85rem;
+  margin: -0.55rem 0 1.1rem;
+}
+
+.skills-topics {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+  margin: 0 0 1.1rem;
+}
+
+.skill-topic {
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--net);
+  background: rgba(74, 222, 128, 0.1);
+  border: 1px solid rgba(74, 222, 128, 0.25);
+  border-radius: 999px;
+  padding: 0.22rem 0.65rem;
+}
+
 .group-emoji {
   display: inline-flex;
   align-items: center;
@@ -119,6 +172,10 @@ const groupIcon: Record<string, string> = {
   border: 1px solid var(--border);
   color: var(--accent);
   transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.group-emoji[data-group='NetSec Lab'] {
+  color: var(--net);
 }
 
 .skills-group:hover .group-emoji {
@@ -186,6 +243,23 @@ const groupIcon: Record<string, string> = {
 
 .skill-card:hover .skill-name {
   color: var(--accent);
+}
+
+.skills-group[data-group='NetSec Lab'] .skill-card::after {
+  background: radial-gradient(120px 60px at 50% 0%, rgba(74, 222, 128, 0.14), transparent 70%);
+}
+
+.skills-group[data-group='NetSec Lab'] .skill-card:hover {
+  border-color: var(--net);
+  box-shadow: 0 14px 30px rgba(74, 222, 128, 0.18);
+}
+
+.skills-group[data-group='NetSec Lab'] .skill-card:hover .skill-icon {
+  filter: drop-shadow(0 4px 10px rgba(74, 222, 128, 0.35));
+}
+
+.skills-group[data-group='NetSec Lab'] .skill-card:hover .skill-name {
+  color: var(--net);
 }
 
 @media (max-width: 640px) {

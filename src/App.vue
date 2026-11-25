@@ -36,7 +36,7 @@ onUnmounted(() => window.removeEventListener('scroll', handleScroll))
 
   <footer class="footer">
     <div class="container footer-inner">
-      <p>&copy; 2026 Gungde Pandu.</p>
+      <p>&copy; 2026 Gungde Pandu. Currently learning networking and security basics.</p>
       <div class="footer-links">
         <a href="https://github.com/JUNKZARD" target="_blank" rel="noopener">GitHub</a>
         <a href="https://www.linkedin.com/in/gung-pandu-2869a936a/" target="_blank" rel="noopener">LinkedIn</a>

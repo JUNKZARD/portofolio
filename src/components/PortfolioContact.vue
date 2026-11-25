@@ -29,8 +29,8 @@ function handleSubmit() {
         <span class="section-tag">Contact</span>
         <h2 class="section-title">Let's Work Together</h2>
         <p class="section-desc">
-          Do you have a project or an interesting idea? Feel free to reach
-          out through this form or directly via social media.
+          Do you have a web project, a study group, or a lab idea? Feel free
+          to reach out through this form or directly via social media.
         </p>
 
         <div class="contact-methods">

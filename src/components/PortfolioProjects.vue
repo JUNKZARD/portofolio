@@ -1,5 +1,22 @@
 <script setup lang="ts">
-const projects = [
+interface Project {
+  title: string
+  desc: string
+  tags: string[]
+  image: string
+  github?: string
+  demo?: string
+  status?: string
+}
+
+const projects: Project[] = [
+  {
+    title: 'AI Clip',
+    desc: 'On Process. A clip generator that uses AI to turn long videos into short clips. Currently in development.',
+    tags: ['AI', 'Video', 'Editing'],
+    image: '/clip.webp',
+    status: 'On Process',
+  },
   {
     title: 'todolist',
     desc: 'A simple to-do list app built with Next.js and TypeScript to manage daily activities.',
@@ -53,17 +70,39 @@ const projects = [
           :data-reveal="'up'"
           :data-delay="(i % 3) * 120"
         >
-          <a :href="project.github" target="_blank" rel="noopener" class="project-thumb">
+          <a
+            v-if="project.github"
+            :href="project.github"
+            target="_blank"
+            rel="noopener"
+            class="project-thumb"
+            :class="{ 'is-blurred': project.status }"
+          >
             <img :src="project.image" :alt="project.title" loading="lazy" />
+            <span v-if="project.status" class="project-status">{{ project.status }}</span>
           </a>
+          <div
+            v-else
+            class="project-thumb"
+            :class="{ 'is-blurred': project.status }"
+          >
+            <img :src="project.image" :alt="project.title" loading="lazy" />
+            <span v-if="project.status" class="project-status">{{ project.status }}</span>
+          </div>
           <div class="project-body">
             <h3 class="project-title">{{ project.title }}</h3>
             <p class="project-desc">{{ project.desc }}</p>
             <div class="project-tags">
               <span v-for="tag in project.tags" :key="tag" class="tag">{{ tag }}</span>
             </div>
-            <div class="project-links">
-              <a :href="project.github" target="_blank" rel="noopener" class="project-link">
+            <div v-if="project.github || project.demo" class="project-links">
+              <a
+                v-if="project.github"
+                :href="project.github"
+                target="_blank"
+                rel="noopener"
+                class="project-link"
+              >
                 Repo
                 <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M7 7h10v10" /></svg>
               </a>
@@ -117,7 +156,7 @@ const projects = [
   position: relative;
 }
 
-.project-thumb::after {
+a.project-thumb::after {
   content: 'Open GitHub ↗';
   position: absolute;
   inset: 0;
@@ -133,7 +172,7 @@ const projects = [
   transition: opacity 0.35s ease;
 }
 
-.project-card:hover .project-thumb::after {
+.project-card:hover a.project-thumb::after {
   opacity: 1;
 }
 
@@ -141,11 +180,39 @@ const projects = [
   width: 100%;
   aspect-ratio: 3/2;
   object-fit: cover;
-  transition: transform 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+  transition: transform 0.5s cubic-bezier(0.22, 1, 0.36, 1), filter 0.4s ease;
 }
 
 .project-card:hover .project-thumb img {
   transform: scale(1.1) rotate(1deg);
+}
+
+.project-thumb.is-blurred {
+  cursor: default;
+}
+
+.project-thumb.is-blurred img {
+  filter: blur(7px);
+}
+
+.project-card:hover .project-thumb.is-blurred img {
+  filter: blur(4px);
+}
+
+.project-status {
+  position: absolute;
+  top: 0.75rem;
+  left: 0.75rem;
+  z-index: 2;
+  padding: 0.3rem 0.8rem;
+  border-radius: 999px;
+  background: linear-gradient(135deg, var(--accent), var(--accent-2));
+  color: #0f172a;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  box-shadow: 0 4px 14px rgba(56, 189, 248, 0.35);
 }
 
 .project-body {

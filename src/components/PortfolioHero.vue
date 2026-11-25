@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { ref, onMounted, onUnmounted } from 'vue'
 
-const roles: string[] = ['Junior Developer', 'Full Stack Developer', 'Data Enthusiast', 'Tech Enthusiast']
+const roles: string[] = ['NetSec Enthusiast', 'Junior Developer', 'Full Stack Developer', 'Data Enthusiast']
 const roleIndex = ref(0)
 const roleChars = ref('')
 const deleting = ref(false)
@@ -54,8 +54,8 @@ onUnmounted(() => {
           <span class="blink-caret"></span>{{ roleChars }}<span class="caret">|</span>
         </h2>
         <p class="hero-desc" data-reveal="up" data-delay="200">
-          I help businesses build beautiful, responsive, and easy-to-use
-          digital experiences. 🚀
+          I build responsive web interfaces and I am learning networking
+          and security basics through hands-on labs.
         </p>
         <div class="hero-cta" data-reveal="up" data-delay="300">
           <a href="#projects" class="btn btn-primary">View Projects <span class="cta-arrow">→</span></a>
@@ -87,13 +87,13 @@ onUnmounted(() => {
         </div>
         <div class="hero-stats" data-reveal="up" data-delay="400">
           <div class="stat">
-            <span class="stat-num">3+</span>
-            <span class="stat-label">Years of Experience</span>
+            <span class="stat-num">Web Develover</span>
+            <span class="stat-label"></span>
           </div>
           <div class="stat-divider" />
           <div class="stat">
-            <span class="stat-num">10+</span>
-            <span class="stat-label">Projects Completed</span>
+            <span class="stat-num">NetSec</span>
+            <span class="stat-label"></span>
           </div>
         </div>
       </div>
@@ -108,21 +108,20 @@ onUnmounted(() => {
         </div>
         <div class="hero-badge">
           <span class="badge-dot" />
-          Open to work
         </div>
         <div class="float-tag float-tag-1"> <img
-            src="https://cdn.simpleicons.org/python/3776ab"
-            alt="logo"
+            src="https://cdn.simpleicons.org/react/61dafb"
+            alt="React"
             loading="eager"
           /></div>
         <div class="float-tag float-tag-2"> <img
-            src="https://cdn.simpleicons.org/vuedotjs/42b883"
-            alt="logo"
+            src="https://cdn.simpleicons.org/cisco/1BA0D7"
+            alt="Cisco Packet Tracer"
             loading="eager"
           /></div>
         <div class="float-tag float-tag-3"> <img
-            src="https://cdn.simpleicons.org/mysql/4479A1"
-            alt="logo"
+            src="https://cdn.simpleicons.org/python/3776ab"
+            alt="Python"
             loading="eager"
           /></div>
       </div>
